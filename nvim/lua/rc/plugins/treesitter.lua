@@ -1,11 +1,23 @@
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = { 
-        "vim",
-        "vimdoc",
-        "lua",
-        "python",        
-
-        "c", "query", "markdown", "markdown_inline" },
+        "bash",
+        "c", "cmake", "cpp", 
+        "csv", 
+        "dart", 
+        "dockerfile", 
+        "gitattributes", "gitignore", 
+        "go", "gomod", "gosum", 
+        "json",
+        "lua", "luadoc",
+        "make", 
+        "markdown", "markdown_inline",
+        "python",
+        "rust", 
+        "toml",
+        "vim", "vimdoc", 
+        "yaml",
+        "zig",
+    },
 
     sync_install = false,
 
