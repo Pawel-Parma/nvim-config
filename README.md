@@ -9,10 +9,10 @@ My personal Nvim config
   - [Activate Config](#4-activate)
   - [Download Linters](#5-download-linters)
 - [List of Conveniences](#list-of-conveniences)
-  - [Plugins](#plugins)
-  - [Key Bindings](#key-bindings)
+  - Plugins
+  - Key Bindings
 
-# Instalation
+# Installation
 > **NOTE:**  
 > Assumes Nvim v0.10.2
 
