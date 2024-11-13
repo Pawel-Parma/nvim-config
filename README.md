@@ -22,12 +22,6 @@ My personal Nvim config
 sudo pacman -Sy ripgrep
 ```
 
-- [packer.nvim](https://github.com/wbthomason/packer.nvim#Quickstart) 
-```sh
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
 ## 2. Backup old nvim config:  
 ```sh
 mv ~/.config/nvim ~/.config/nvim.bak
@@ -39,24 +33,7 @@ git clone https://github.com/Pawel-Parma/nvim-config ~/.config/nvim
 ```
 
 ## 4. Activate
-Open file  
-```sh
-nvim ~/.config/nvim/lua/package_manager.lua
-```
-Source file
-```vim
-so
-```
-Download packages
-```vim
-PackerSync
-```
-Quit
-```vim
-q
-```
-## 5. Download linters
-The linters will be downloaded automatically upon the next nvim entrance
+The packages and linters will be automatically downloaded the next time you open Nvim
 ```sh
 nvim
 ```
