@@ -45,15 +45,15 @@ nvim ~/.config/nvim/lua/package_manager.lua
 ```
 Source file
 ```vim
-:so
+so
 ```
 Download packages
 ```vim
-:PackerSync
+PackerSync
 ```
 Quit
 ```vim
-:q
+q
 ```
 ## 5. Download linters
 The linters will be downloaded automatically upon the next nvim entrance
