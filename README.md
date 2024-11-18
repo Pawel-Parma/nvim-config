@@ -1,6 +1,9 @@
 # Nvim Config
 My personal Nvim config
 
+> [!important] 
+> Assumes Nvim v0.10.2
+
 ## Table of Contents
 - [Installation](#installation)
   - [Requirements](#1-install-requirements)
@@ -13,9 +16,6 @@ My personal Nvim config
   - Key Bindings
 
 # Installation
-> **NOTE:**  
-> Assumes Nvim v0.10.2
-
 ## 1. Install requirements:
 - [ripgrep](https://github.com/BurntSushi/ripgrep#Installation) 
 ```sh
