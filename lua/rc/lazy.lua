@@ -48,6 +48,8 @@ require("lazy").setup({
             "williamboman/mason-lspconfig.nvim",
             "neovim/nvim-lspconfig",
         },
-
+        {
+            "laytan/cloak.nvim"
+        },
     },
 })
