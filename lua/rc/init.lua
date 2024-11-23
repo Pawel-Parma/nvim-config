@@ -3,4 +3,4 @@ require("rc.remaps")
 require("rc.lazy")
 require("rc.plugins")
 require("rc.theme")
-
+require("rc.retab")

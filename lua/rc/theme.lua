@@ -11,7 +11,6 @@ function setBackroundOpacity(o)
 end
 
 
-
 setColorScheme()
 setBackroundOpacity()
 
