@@ -15,41 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 
-require("lazy").setup({
-    install = { missing = true, colorscheme = { "catppuccin" } },
+require("lazy").setup("rc.plugins", {
+    install = { missing = true, colorscheme = { "tokyonight" } },
     checker = { enabled = true, notify = false },
-
-    spec = {
-        { "catppuccin/nvim",     name = "catppuccin", priority = 1000 },
-        { "theprimeagen/harpoon" },
-        {
-            "nvim-telescope/telescope.nvim",
-            branch = "0.1.x",
-            dependencies = { { "nvim-lua/plenary.nvim" } }
-        },
-        { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-        { "mbbill/undotree" },
-        {
-            "nvim-tree/nvim-tree.lua",
-            dependencies = { "nvim-lua/plenary.nvim" }
-        },
-        { "tpope/vim-fugitive" },
-        { "romainl/vim-cool" },
-        {
-            "folke/todo-comments.nvim",
-            dependencies = { "nvim-lua/plenary.nvim" }
-        },
-
-        { 'neovim/nvim-lspconfig' },
-        { 'hrsh7th/cmp-nvim-lsp' },
-        { 'hrsh7th/nvim-cmp' },
-        {
-            "williamboman/mason.nvim",
-            "williamboman/mason-lspconfig.nvim",
-            "neovim/nvim-lspconfig",
-        },
-        {
-            "laytan/cloak.nvim"
-        },
-    },
 })

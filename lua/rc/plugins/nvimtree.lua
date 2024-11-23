@@ -1,55 +1,38 @@
-local nvim_tree = require("nvim-tree")
-local api = require("nvim-tree.api")
-local utils = require("nvim-tree.utils")
+return {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+        local nvim_tree = require("nvim-tree")
+        local api = require("nvim-tree.api")
+        local utils = require("nvim-tree.utils")
 
-vim.keymap.set("n", "<leader>e", api.tree.toggle, {})
+        vim.keymap.set("n", "<leader>e", api.tree.toggle, {})
 
-nvim_tree.setup({
-    git = {
-        enable = true,
-        ignore = true,
-    },
+        nvim_tree.setup({
+            git = {
+                enable = true,
+                ignore = true,
+            },
 
-    open_on_tab = false,
-    -- TODO: customize
-    respect_buf_cwd = true, -- Respect the current working directory
+            open_on_tab = false,
+            -- TODO: customize
+            respect_buf_cwd = true, -- Respect the current working directory
 
-    renderer = {
-        highlight_opened_files = "name", -- Highlight opened files in NvimTree
-        root_folder_modifier = ":t",     -- Show only the folder name (not full path)
-    },
-})
+            renderer = {
+                highlight_opened_files = "name", -- Highlight opened files in NvimTree
+                root_folder_modifier = ":t", -- Show only the folder name (not full path)
+            },
+        })
 
-vim.api.nvim_create_autocmd("BufLeave", {
-    nested = true,
-    callback = function()
-        local active_wins_len = #vim.api.nvim_list_wins()
-        local is_nvim_tree = utils.is_nvim_tree_buf()
-        if is_nvim_tree and active_wins_len > 1 and active_wins_len ~= 7 then -- TODO: fix edge case on active_wins_len, it is seven on nvim . | <leader>f
-            vim.cmd('quit')
-        end
-    end,
-})
-
-
---[[
-vim.api.nvim_create_autocmd("BufEnter", {
-    nested = true,
-    callback = function()
-        local active_wins_len = #vim.api.nvim_list_wins()
-        local is_nvim_tree = utils.is_nvim_tree_buf()
-
-        if is_nvim_tree or XXXXXXXXX then
-            return
-        end
-
-        for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-            -- Check if buffer is valid and is an nvim-tree buffer
-            if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_get_option(buf, 'filetype') == 'NvimTree' then
-                    vim.cmd("b" .. buf .. " | q")
-                    break
-            end
-        end
-    end,
-})
---]]
+        vim.api.nvim_create_autocmd("BufLeave", {
+            nested = true,
+            callback = function()
+                local active_wins_len = #vim.api.nvim_list_wins()
+                local is_nvim_tree = utils.is_nvim_tree_buf()
+                if is_nvim_tree and active_wins_len > 1 and active_wins_len ~= 7 then -- TODO: fix edge case on active_wins_len, it is seven on nvim . | <leader>f
+                    vim.cmd('quit')
+                end
+            end,
+        })
+    end
+}

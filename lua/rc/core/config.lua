@@ -49,3 +49,8 @@ vim.opt.cursorline = true
 
 -- smooth up nvim
 vim.opt.ttyfast = true
+
+-- standatdize a bit
+vim.opt.backspace = "indent,eol,start"
+
+

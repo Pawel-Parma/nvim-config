@@ -1,6 +1,2 @@
-require("rc.config")
-require("rc.remaps")
+require("rc.core")
 require("rc.lazy")
-require("rc.plugins")
-require("rc.theme")
-require("rc.retab")
