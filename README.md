@@ -21,6 +21,10 @@ My personal Nvim config
 ```sh
 sudo pacman -Sy ripgrep
 ```
+- [python](https://www.python.org/downloads/source/) 
+```sh
+sudo pacman -Sy python
+```
 
 ## 2. Backup old nvim config:  
 ```sh
