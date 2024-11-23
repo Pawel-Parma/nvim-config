@@ -1,7 +1,7 @@
 -- disable compatibility with vi
 vim.opt.compatible = false
 
--- Disable netrw 
+-- Disable netrw
 vim.g.netrw_banner = 0
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -12,14 +12,14 @@ vim.g.mapleader = " "
 -- mouse
 vim.opt.mouse = ""
 
--- cursor 
-vim.opt.scrolloff = 12 
+-- cursor
+vim.opt.scrolloff = 12
 
 -- line numbering
 vim.opt.rnu = true
 vim.opt.nu = true
 
--- search 
+-- search
 -- vim.opt.ignorecase = true
 vim.opt.showmatch = true
 vim.opt.incsearch = true
@@ -42,11 +42,10 @@ vim.termguicolors = true
 
 -- columns
 vim.opt.colorcolumn = "120"
-vim.opt.signcolumn = "number" 
+vim.opt.signcolumn = "yes"
 
 -- lines
 vim.opt.cursorline = true
 
 -- smooth up nvim
 vim.opt.ttyfast = true
-

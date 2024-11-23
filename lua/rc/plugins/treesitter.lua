@@ -1,26 +1,26 @@
 require 'nvim-treesitter.configs'.setup {
-    ensure_installed = { 
+    ensure_installed = {
         "bash",
-        "c", "cmake", "cpp", 
-        "csv", 
-        "dart", 
-        "dockerfile", 
-        "gitattributes", "gitignore", 
-        "go", "gomod", "gosum", 
+        "c", "cmake", "cpp",
+        "csv",
+        "dart",
+        "dockerfile",
+        "gitattributes", "gitignore",
+        "go", "gomod", "gosum",
         "json",
         "lua", "luadoc",
-        "make", 
+        "make",
         "markdown", "markdown_inline",
         "python",
-        "rust", 
+        "rust",
         "toml",
-        "vim", "vimdoc", 
+        "vim", "vimdoc",
         "yaml",
         "zig",
     },
 
     sync_install = false,
-
+-- TODO: configure
     -- Automatically install missing parsers when entering buffer
     -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
     auto_install = true,
@@ -29,5 +29,7 @@ require 'nvim-treesitter.configs'.setup {
         enable = true,
         additional_vim_regex_highlighting = false,
     },
+    indent = {
+        enable = true,
+    },
 }
-
