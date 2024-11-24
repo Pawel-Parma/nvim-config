@@ -5,22 +5,18 @@ function SetOpacity(o)
 end
 
 function SetColorTheme(s)
-    s = s or "tokyonight"
-   vim.cmd("colorscheme " .. s)
+    s = s or "catppuccin"
+    vim.cmd("colorscheme " .. s)
 end
 
 return {
-    "folke/tokyonight.nvim",
-    name = "tokyonight",
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
     opts = {
-        transparent = true,
-        styles = {
-            sidebars = "transparent",
-            float = "transparent",
-        },
+        transparent_background = true,
     },
-    init = function() 
+    init = function()
         SetColorTheme()
         SetOpacity()
     end
