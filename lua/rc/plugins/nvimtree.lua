@@ -5,15 +5,19 @@ return {
         local nvim_tree = require("nvim-tree")
         local api = require("nvim-tree.api")
         local utils = require("nvim-tree.utils")
-
-        vim.keymap.set("n", "<leader>e", api.tree.toggle, {})
+        local harpoon_mark = require("harpoon.mark")
 
         nvim_tree.setup({
+            view = {
+                relativenumber = true,
+            },
             git = {
                 enable = true,
                 ignore = true,
             },
-
+            filters = {
+                custom = { ".git" },
+            },
             open_on_tab = false,
             -- TODO: customize
             respect_buf_cwd = true, -- Respect the current working directory
@@ -23,6 +27,22 @@ return {
                 root_folder_modifier = ":t", -- Show only the folder name (not full path)
             },
         })
+
+        
+        vim.keymap.set("n", "<leader>ee", api.tree.toggle, {})
+        vim.keymap.set("n", "<leader>ef", function() api.tree.toggle({find_file=true}) end, {})
+        vim.keymap.set("n", "<leader>ec", api.tree.collapse_all, {})
+        vim.keymap.set("n", "<leader>ex", api.tree.expand_all, {})
+        vim.keymap.set("n", "<leader>er", api.tree.reload, {})
+        vim.keymap.set("n", "<localleader>a", function()
+            print("l works\n")
+            local node = api.tree.get_node_under_cursor()
+            if node and node.type == "file" then        
+                harpoon_mark.add_file(node.absolute_path)
+            end
+        end,
+         {
+            })
 
         vim.api.nvim_create_autocmd("BufLeave", {
             nested = true,

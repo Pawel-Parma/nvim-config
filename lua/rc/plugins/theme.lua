@@ -1,12 +1,12 @@
-function SetBackgroundOpacity(o)
+function SetOpacity(o)
     o = o or "none"
     vim.api.nvim_set_hl(0, "Normal", { bg = o })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = o })
 end
 
-function SetColorScheme(s)
+function SetColorTheme(s)
     s = s or "tokyonight"
-    vim.cmd("colorscheme " .. s)
+   vim.cmd("colorscheme " .. s)
 end
 
 return {
@@ -20,8 +20,8 @@ return {
             float = "transparent",
         },
     },
-    config = function()
-        SetColorScheme()
-        SetBackgroundOpacity()
+    init = function() 
+        SetColorTheme()
+        SetOpacity()
     end
 }

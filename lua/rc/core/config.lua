@@ -8,6 +8,7 @@ vim.g.loaded_netrwPlugin = 1
 
 -- leader
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 -- mouse
 vim.opt.mouse = ""
@@ -52,5 +53,3 @@ vim.opt.ttyfast = true
 
 -- standatdize a bit
 vim.opt.backspace = "indent,eol,start"
-
-

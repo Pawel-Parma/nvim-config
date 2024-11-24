@@ -1,16 +1,18 @@
+-- lsp list
+-- https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers
 return {
     "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+    dependencies = {
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    },
     config = function()
-        -- lsp list
-        -- https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers
-
         local mason = require("mason")
         local mason_lspconfig = require("mason-lspconfig")
         local lspconfig = require("lspconfig")
 
         mason.setup({})
+
         mason_lspconfig.setup({
             ensure_installed = {
                 "bashls",
@@ -43,7 +45,7 @@ return {
                         return
                     end
                 end
-                
+
                 client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
                     runtime = {
                         version = 'LuaJIT'

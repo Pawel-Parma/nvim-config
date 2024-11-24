@@ -1,10 +1,14 @@
 return {
     'neovim/nvim-lspconfig',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/nvim-cmp',
+    dependencies = {
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/nvim-cmp'
+    },
     config = function()
-        local cmp_lsp = require("cmp_nvim_lsp")
         local lspconfig_defaults = require('lspconfig').util.default_config
+        local cmp_lsp = require("cmp_nvim_lsp")
+        local cmp = require('cmp')
+
         lspconfig_defaults.capabilities = vim.tbl_deep_extend(
             'force',
             lspconfig_defaults.capabilities,
@@ -28,8 +32,6 @@ return {
             end,
         })
 
-
-        local cmp = require('cmp')
         cmp.setup({
             sources = {
                 { name = 'nvim_lsp' },
