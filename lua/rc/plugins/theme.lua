@@ -6,7 +6,7 @@ end
 
 function SetColorTheme(s)
     s = s or "catppuccin"
-    vim.cmd("colorscheme " .. s)
+    vim.cmd.colorscheme(s)
 end
 
 return {

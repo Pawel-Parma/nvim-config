@@ -21,9 +21,11 @@ vim.opt.rnu = true
 vim.opt.nu = true
 
 -- search
--- vim.opt.ignorecase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.showmatch = true
 vim.opt.incsearch = true
+vim.opt.hlsearch = true 
 
 -- indentation
 vim.opt.tabstop = 4

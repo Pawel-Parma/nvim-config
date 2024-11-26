@@ -5,7 +5,7 @@ return {
         local nvim_tree = require("nvim-tree")
         local api = require("nvim-tree.api")
         local utils = require("nvim-tree.utils")
-        local harpoon_mark = require("harpoon.mark")
+        local harpoon = require("harpoon")
 
         nvim_tree.setup({
             view = {
@@ -24,24 +24,24 @@ return {
 
             renderer = {
                 highlight_opened_files = "name", -- Highlight opened files in NvimTree
-                root_folder_modifier = ":t", -- Show only the folder name (not full path)
+                root_folder_modifier = ":t",     -- Show only the folder name (not full path)
             },
         })
 
-        
+
         vim.keymap.set("n", "<leader>ee", api.tree.toggle, {})
-        vim.keymap.set("n", "<leader>ef", function() api.tree.toggle({find_file=true}) end, {})
+        vim.keymap.set("n", "<leader>ef", function() api.tree.toggle({ find_file = true }) end, {})
         vim.keymap.set("n", "<leader>ec", api.tree.collapse_all, {})
         vim.keymap.set("n", "<leader>ex", api.tree.expand_all, {})
         vim.keymap.set("n", "<leader>er", api.tree.reload, {})
         vim.keymap.set("n", "<localleader>a", function()
-            print("l works\n")
-            local node = api.tree.get_node_under_cursor()
-            if node and node.type == "file" then        
-                harpoon_mark.add_file(node.absolute_path)
-            end
-        end,
-         {
+                local node = api.tree.get_node_under_cursor()
+                if node and node.type == "file" then
+                    print("works\n")
+                    harpoon:list():add({value = node.absolute_path, context = {row = 1, col = 0}})
+                end
+            end,
+            {
             })
 
         vim.api.nvim_create_autocmd("BufLeave", {
