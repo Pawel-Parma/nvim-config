@@ -37,12 +37,11 @@ return {
         vim.keymap.set("n", "<localleader>a", function()
                 local node = api.tree.get_node_under_cursor()
                 if node and node.type == "file" then
-                    print("works\n")
-                    harpoon:list():add({value = node.absolute_path, context = {row = 1, col = 0}})
+                    local relative_path = vim.fn.fnamemodify(node.absolute_path, ":.")
+                    harpoon:list():add({ value = relative_path, context = { row = 1, col = 0 } })
                 end
             end,
-            {
-            })
+            {})
 
         vim.api.nvim_create_autocmd("BufLeave", {
             nested = true,

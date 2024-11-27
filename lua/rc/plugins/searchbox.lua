@@ -17,10 +17,10 @@ return {
                 after_mount = function(input)
                     local opts = { buffer = input.bufnr }
 
-                    vim.keymap.set('i', '<Tab>', function() vim.api.nvim_input("<C-l>") end, opts)
-                    vim.keymap.set('i', '<S-Tab>', function() vim.api.nvim_input("<C-g>") end, opts)
-                    vim.keymap.set('i', '<Down>', function() vim.api.nvim_input("<C-l>") end, opts)
-                    vim.keymap.set('i', '<Up>', function() vim.api.nvim_input("<C-g>") end, opts)
+                    vim.keymap.set('i', '<Tab>', '<Plug>(searchbox-next-match)', opts)
+                    vim.keymap.set('i', '<S-Tab>', '<Plug>(searchbox-prev-match)', opts)
+                    vim.keymap.set('i', '<Down>', '<Plug>(searchbox-next-match)', opts)
+                    vim.keymap.set('i', '<Up>', '<Plug>(searchbox-prev-match)', opts)
                 end
             },
         })
