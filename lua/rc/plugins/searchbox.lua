@@ -21,6 +21,8 @@ return {
                     vim.keymap.set('i', '<S-Tab>', '<Plug>(searchbox-prev-match)', opts)
                     vim.keymap.set('i', '<Down>', '<Plug>(searchbox-next-match)', opts)
                     vim.keymap.set('i', '<Up>', '<Plug>(searchbox-prev-match)', opts)
+
+                    vim.keymap.set('i', '<leader>r', "<Esc><Plug>(searchbox-close):SearchBoxReplaceLast<CR>", opts)
                 end
             },
         })
