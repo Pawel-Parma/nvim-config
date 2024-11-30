@@ -6,7 +6,9 @@ end
 
 function SetColorTheme(s)
     s = s or "catppuccin"
-    vim.cmd.colorscheme(s)
+    local theme_flavour = "mocha"
+    vim.myg.theme_flavour = theme_flavour
+    vim.cmd.colorscheme(s .. "-" .. theme_flavour)
 end
 
 return {
@@ -15,9 +17,15 @@ return {
     priority = 1000,
     opts = {
         transparent_background = true,
+        term_colors = true,
+        custom_highlights = function(colors)
+            return {
+                MyHeaderHighlight = { fg = colors.blue, bg = "NONE" },
+            }
+        end,
     },
     init = function()
         SetColorTheme()
         SetOpacity()
-    end
+    end,
 }

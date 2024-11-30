@@ -20,6 +20,7 @@ return {
                 },
             },
         })
+        vim.keymap.set("n", "<leader>:", ":", {noremap = true})
         vim.keymap.set("n", ":", function() cmdline.open({ default_value = "" }) end, {})
         vim.keymap.set("v", ":", function() cmdline.open({ default_value = "\'<,\'>" }) end, {})
     end
