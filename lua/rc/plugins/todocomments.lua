@@ -3,6 +3,6 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
         require("todo-comments").setup()
-        -- TODO: configure
+        vim.keymap.set("n", "<leader>t", function() vim.cmd[[:TodoTelescope keywords=TODO,FIX]] end, {})
     end
 }

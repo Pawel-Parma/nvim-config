@@ -5,10 +5,8 @@ function SetOpacity(o)
 end
 
 function SetColorTheme(s)
-    s = s or "catppuccin"
-    local theme_flavour = "mocha"
-    vim.myg.theme_flavour = theme_flavour
-    vim.cmd.colorscheme(s .. "-" .. theme_flavour)
+    s = s or "catppuccin-mocha"
+    vim.cmd.colorscheme(s)
 end
 
 return {
