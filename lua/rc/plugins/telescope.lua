@@ -1,3 +1,4 @@
+-- TODO: config
 return
 {
     "nvim-telescope/telescope.nvim",

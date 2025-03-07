@@ -1,4 +1,4 @@
--- lsp list
+-- TODO: config lsp list
 -- https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers
 return {
     "williamboman/mason.nvim",
@@ -22,13 +22,13 @@ return {
                 "jsonls",
                 'lua_ls',
                 "markdown_oxide",
-                "pylyzer",
+                --          "basedpyright",
                 "rust_analyzer",
                 "taplo",
                 "yamlls",
                 "zls",
 
-                "typos_lsp",
+--                "typos_lsp",
             },
             handlers = {
                 function(lsp)

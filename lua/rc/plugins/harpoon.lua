@@ -10,7 +10,6 @@ return {
         vim.keymap.set("n", "<leader>j", function() harpoon:list():prev() end)
         vim.keymap.set("n", "<leader>k", function() harpoon:list():next() end)
 
-        vim.keymap.set("n", "<leader>0", function() harpoon:list():select(10) end)
         for i = 1, 9 do
             vim.keymap.set("n", "<leader>" .. i, function() harpoon:list():select(i) end)
         end

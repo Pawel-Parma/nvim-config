@@ -1,4 +1,4 @@
-return {
+retur{
     "goolord/alpha-nvim",
     event = "VimEnter",
     config = function()
