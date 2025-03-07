@@ -11,7 +11,8 @@ return
 
         vim.keymap.set("n", "<leader>fs", builtin.live_grep, {})
         vim.keymap.set("n", "<leader>fg", builtin.git_files, {})
-        vim.keymap.set("n", "<leader>fe", function()
+
+        local find_files = function()
             builtin.find_files({
                 attach_mappings = function(_, map)
                     map("i", "<localleader>a", function(prompt_bufnr)
@@ -24,6 +25,8 @@ return
                     return true
                 end,
             })
-        end, {})
+        end
+        vim.keymap.set("n", "<leader>fe", find_files, {})
+        vim.keymap.set("n", "<leader>ff", find_files, {})
     end
 }
