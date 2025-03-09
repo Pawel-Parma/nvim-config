@@ -16,7 +16,7 @@ return {
         mason_lspconfig.setup({
             ensure_installed = {
                 "bashls",
-                -- "clangd", "cmake",
+                "clangd", "cmake",
                 "dockerls",
                 "gopls",
                 "jsonls",
@@ -28,7 +28,7 @@ return {
                 "yamlls",
                 "zls",
 
---                "typos_lsp",
+                --                "typos_lsp",
             },
             handlers = {
                 function(lsp)
@@ -36,6 +36,8 @@ return {
                 end,
             }
         })
+
+
 
         lspconfig["lua_ls"].setup {
             on_init = function(client)

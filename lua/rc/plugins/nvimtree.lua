@@ -8,6 +8,7 @@ return {
 
         nvim_tree.setup({
             view = {
+                number = true,
                 relativenumber = true,
             },
             git = {
