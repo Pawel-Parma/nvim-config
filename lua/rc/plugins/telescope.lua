@@ -8,6 +8,18 @@ return {
         local action_state = require("telescope.actions.state")
         local harpoon = require("harpoon")
 
+        require('telescope').setup({
+            defaults = {
+                file_ignore_patterns = { "^.git/" },
+                hidden = true,
+            },
+            pickers = {
+                find_files = {
+                    find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+                },
+            },
+        })
+
         vim.keymap.set("n", "<leader>fs", builtin.live_grep, {})
         vim.keymap.set("n", "<leader>fg", builtin.git_files, {})
 
