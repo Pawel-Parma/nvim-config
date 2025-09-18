@@ -2,7 +2,7 @@
 My personal Nvim config
 
 > [!important] 
-> Assumes Nvim v0.10.2
+> Requres Nvim v0.11.0
 
 ## Table of Contents
 - [Installation](#installation)
@@ -11,20 +11,13 @@ My personal Nvim config
   - [Install Config](#3-install)
   - [Activate Config](#4-activate)
   - [Download Linters](#5-download-linters)
-- [List of Conveniences](#list-of-conveniences)
-  - Plugins
-  - Key Bindings
+- [List of Changes](#list-of-changes)
+  - [Plugins](#plugins)
+  - [Key Bindings](#key-bindings)
 
 # Installation
 ## 1. Install requirements:
 - [ripgrep](https://github.com/BurntSushi/ripgrep#Installation) 
-```sh
-sudo pacman -Sy ripgrep
-```
-- [python](https://www.python.org/downloads/source/) 
-```sh
-sudo pacman -Sy python
-```
 
 ## 2. Backup old nvim config:  
 ```sh
@@ -42,17 +35,15 @@ The packages and linters will be automatically downloaded the next time you open
 nvim
 ```
 
-# List of conveniences
+# List of Changes 
+## Plugins 
 <details>
-  <summary>Plugins</summary>
-  
-  - TODO
-
+- "goolord/alpha-nvim"
+- "laytan/cloak.nvim"
 </details>
 
+## Key Bindings
 <details>
-  <summary>Key bindings</summary>
-
   - TODO
-
 </details>
+
