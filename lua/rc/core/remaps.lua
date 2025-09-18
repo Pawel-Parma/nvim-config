@@ -1,7 +1,6 @@
 vim.keymap.set("n", "Q", "<nop>", {})
 vim.keymap.set("n", "q:", "<nop>", {})
 
-vim.keymap.set("n", "<leader>nf", ":e %:h/", {})
 vim.keymap.set("n", "<leader>nf", function()
     local filename = vim.fn.input("New filename: ")
     if filename == "" then
@@ -24,3 +23,8 @@ vim.keymap.set("n", "<leader>h", ":bprev<CR>", {})
 vim.keymap.set("n", "<leader>l", ":bnext<CR>", {})
 
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>")
+vim.keymap.set({"c", "i", "n", "v"}, "<Left>", "<nop>", {})
+vim.keymap.set({"c", "i", "n", "v"}, "<Down>", "<nop>", {})
+vim.keymap.set({"c", "i", "n", "v"}, "<Up>", "<nop>", {})
+vim.keymap.set({"c", "i", "n", "v"}, "<Right>", "<nop>", {})
+
