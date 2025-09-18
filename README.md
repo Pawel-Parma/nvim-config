@@ -37,13 +37,19 @@ nvim
 
 # List of Changes 
 ## Plugins 
-<details>
-- "goolord/alpha-nvim"
-- "laytan/cloak.nvim"
-</details>
+- [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim)  
+- [laytan/cloak.nvim](https://github.com/laytan/cloak.nvim)  
+- [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim)  
+- [theprimeagen/harpoon](https://github.com/theprimeagen/harpoon)  
+- [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)  
+- [fedepujol/move.nvim](https://github.com/fedepujol/move.nvim)  
+- [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)  
+- [catppuccin/nvim](https://github.com/catppuccin/nvim)  
+- [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)  
+- [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)  
+- [mbbill/undotree](https://github.com/mbbill/undotree)  
+- [romainl/vim-cool](https://github.com/romainl/vim-cool)  
 
 ## Key Bindings
-<details>
-  - TODO
-</details>
+ - TODO
 
