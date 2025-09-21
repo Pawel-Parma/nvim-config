@@ -2,7 +2,7 @@
 My personal Nvim config
 
 > [!important] 
-> Requres Nvim v0.11.0
+> Requires Neovim v0.11.0
 
 ## Table of Contents
 - [Installation](#installation)
@@ -52,7 +52,10 @@ nvim
 - [romainl/vim-cool](https://github.com/romainl/vim-cool)  
 
 ## Key Bindings
-\<leader\> = " "
+```vim
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
+```
 | Key           | Modes      | Action              |
 | ------------- | ---------- | ------------------- |
 | Q             | n          | \<nop\>             | 
@@ -80,6 +83,8 @@ nvim
 | \<leader\>8   | n          | Open 8th list item  | 
 | \<leader\>9   | n          | Open 9th list item  | 
 | \<leader\>0   | n          | Open 10th list item | 
+<!-- |               |            |                     |--!>
+| \<C-s\>       | n, x       | Format file         | 
 | \<A-j\>       | i          | Move line down      | 
 | \<A-k\>       | i          | Move line up        | 
 | \<A-h\>       | i          | Move word left      | 

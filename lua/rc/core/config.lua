@@ -49,4 +49,3 @@ vim.opt.signcolumn = "yes"
 
 -- lines
 vim.opt.cursorline = true
-
