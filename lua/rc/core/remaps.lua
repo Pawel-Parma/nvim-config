@@ -22,9 +22,9 @@ end, {})
 vim.keymap.set("n", "<leader>h", ":bprev<CR>", {})
 vim.keymap.set("n", "<leader>l", ":bnext<CR>", {})
 
-vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>")
-vim.keymap.set({"c", "i", "n", "v"}, "<Left>", "<nop>", {})
+vim.keymap.set({ "n", "v" }, "<Space>", "<nop>")
 vim.keymap.set({"c", "i", "n", "v"}, "<Down>", "<nop>", {})
 vim.keymap.set({"c", "i", "n", "v"}, "<Up>", "<nop>", {})
+vim.keymap.set({"c", "i", "n", "v"}, "<Left>", "<nop>", {})
 vim.keymap.set({"c", "i", "n", "v"}, "<Right>", "<nop>", {})
 
