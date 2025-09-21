@@ -83,7 +83,6 @@ vim.g.maplocalleader = ","
 | \<leader\>8   | n          | Open 8th list item  | 
 | \<leader\>9   | n          | Open 9th list item  | 
 | \<leader\>0   | n          | Open 10th list item | 
-<!-- |               |            |                     |--!>
 | \<C-s\>       | n, x       | Format file         | 
 | \<A-j\>       | i          | Move line down      | 
 | \<A-k\>       | i          | Move line up        | 
