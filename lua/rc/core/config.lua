@@ -27,6 +27,9 @@ vim.opt.showmatch = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
 
+-- replace
+vim.opt.inccommand = "nosplit"
+
 -- indentation
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
