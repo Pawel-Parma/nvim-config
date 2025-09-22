@@ -18,6 +18,8 @@ My personal Nvim config
 # Installation
 ## 1. Install requirements:
 - [ripgrep](https://github.com/BurntSushi/ripgrep#Installation) 
+- [node](https://github.com/nodejs/node)
+- [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
 
 ## 2. Backup old nvim config:  
 ```sh
@@ -56,50 +58,63 @@ nvim
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 ```
-| Key           | Modes      | Action              |
-| ------------- | ---------- | ------------------- |
-| Q             | n          | \<nop\>             | 
-| q:            | n          | \<nop\>             | 
-| \<leader\>nf  | n          | New File            | 
-| \<leader\>h   | n          | :bprev\<CR\>        | 
-| \<leader\>l   | n          | :bnext\<CR\>        | 
-| \<Space\>     | n, v       | \<nop\>             | 
-| \<Down\>      | c, i, n, v | \<nop\>             | 
-| \<Up\>        | c, i, n, v | \<nop\>             | 
-| \<Left\>      | c, i, n, v | \<nop\>             | 
-| \<Right\>     | c, i, n, v | \<nop\>             | 
-| \<leader\>p   | n          | Preview hunk        | 
-| \<leader\>a   | n          | Add to harpoon list | 
-| \<C-e\>       | n          | Open harpoon list   | 
-| \<leader\>j   | n          | Next item from list | 
-| \<leader\>k   | n          | Prev item from list | 
-| \<leader\>1   | n          | Open 1st list item  | 
-| \<leader\>2   | n          | Open 3nd list item  | 
-| \<leader\>3   | n          | Open 3rd list item  | 
-| \<leader\>4   | n          | Open 4th list item  | 
-| \<leader\>5   | n          | Open 5th list item  | 
-| \<leader\>6   | n          | Open 6th list item  | 
-| \<leader\>7   | n          | Open 7th list item  | 
-| \<leader\>8   | n          | Open 8th list item  | 
-| \<leader\>9   | n          | Open 9th list item  | 
-| \<leader\>0   | n          | Open 10th list item | 
-| \<C-s\>       | n, x       | Format file         | 
-| \<A-j\>       | i          | Move line down      | 
-| \<A-k\>       | i          | Move line up        | 
-| \<A-h\>       | i          | Move word left      | 
-| \<A-l\>       | i          | Move word right     | 
-| \<A-j\>       | x          | Move block down     | 
-| \<A-k\>       | x          | Move block up       | 
-| \<A-h\>       | x          | Move block left     | 
-| \<A-l\>       | x          | Move block right    | 
-| \<leader\>fs  | n          | Live grep           |
-| \<leader\>fg  | n          | Find git files      |
-| \<leader\>fb  | n          | Find buffers        |
-| \<leader\>fh  | n          | Find help tags      | 
-| \<leader\>fe  | n          | Find files          |
-| \<leader\>ef  | n          | Find files          |
-| \<leader\>t   | n          | Search TODOs        |
-| \<leader\>u   | n          | Toggle undo tree    |
+| Key           | Modes      | Action                |
+| ------------- | ---------- | --------------------- |
+| Q             | n          | \<nop\>               | 
+| q:            | n          | \<nop\>               | 
+| \<leader\>nf  | n          | New File              | 
+| \<leader\>h   | n          | :bprev\<CR\>          | 
+| \<leader\>l   | n          | :bnext\<CR\>          | 
+| \<Space\>     | n, v       | \<nop\>               | 
+| \<Down\>      | c, i, n, v | \<nop\>               | 
+| \<Up\>        | c, i, n, v | \<nop\>               | 
+| \<Left\>      | c, i, n, v | \<nop\>               | 
+| \<Right\>     | c, i, n, v | \<nop\>               | 
+| \<leader\>p   | n          | Preview hunk          | 
+| \<leader\>a   | n          | Add to harpoon list   | 
+| \<C-e\>       | n          | Open harpoon list     | 
+| \<leader\>j   | n          | Next item from list   | 
+| \<leader\>k   | n          | Prev item from list   | 
+| \<leader\>1   | n          | Open 1st list item    | 
+| \<leader\>2   | n          | Open 3nd list item    | 
+| \<leader\>3   | n          | Open 3rd list item    | 
+| \<leader\>4   | n          | Open 4th list item    | 
+| \<leader\>5   | n          | Open 5th list item    | 
+| \<leader\>6   | n          | Open 6th list item    | 
+| \<leader\>7   | n          | Open 7th list item    | 
+| \<leader\>8   | n          | Open 8th list item    | 
+| \<leader\>9   | n          | Open 9th list item    | 
+| \<leader\>0   | n          | Open 10th list item   | 
+| gd            | n          | Go to definition      |
+| gD            | n          | Go to declaration     |
+| gi            | n          | Go to implementation  |
+| gr            | n          | Show references       |
+| go            | n          | Go to type definition |
+| ca            | n          | Code action           |
+| K             | n          | Show hover            |
+| \<C-k\>       | n          | Show signature help   |
+| \<leader\>r   | n          | Rename                |
+| \<leader\>fo  | n, x       | Format                |
+| \<C-s\>       | n, x       | Save and format       |
+| \<leader\>d   | n          | Open diagnostic       |
+| \[d           | n          | Go to prev diagnostic |
+| \]d           | n          | Go to next diagnostic |
+| \<A-j\>       | i          | Move line down        | 
+| \<A-k\>       | i          | Move line up          | 
+| \<A-h\>       | i          | Move word left        | 
+| \<A-l\>       | i          | Move word right       | 
+| \<A-j\>       | x          | Move block down       | 
+| \<A-k\>       | x          | Move block up         | 
+| \<A-h\>       | x          | Move block left       | 
+| \<A-l\>       | x          | Move block right      | 
+| \<leader\>fs  | n          | Live grep             |
+| \<leader\>fg  | n          | Find git files        |
+| \<leader\>fb  | n          | Find buffers          |
+| \<leader\>fh  | n          | Find help tags        | 
+| \<leader\>fe  | n          | Find files            |
+| \<leader\>ef  | n          | Find files            |
+| \<leader\>t   | n          | Search TODOs          |
+| \<leader\>u   | n          | Toggle undo tree      |
 
 There are also some default kebinds or functions provided by plugins, for those go to the plugin github repository.
   
