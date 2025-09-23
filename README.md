@@ -61,67 +61,69 @@ nvim
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 ```
-| Key           | Modes   | Action                |
-| ------------- | ------- | --------------------- |
-| Q             | n       | \<nop\>               | 
-| q:            | n       | \<nop\>               | 
-| \<leader\>nf  | n       | New File              | 
-| \<leader\>h   | n       | :bprev\<CR\>          | 
-| \<leader\>l   | n       | :bnext\<CR\>          | 
-| \<Space\>     | n, v    | \<nop\>               | 
-| \<Down\>      | i, n, v | \<nop\>               | 
-| \<Up\>        | i, n, v | \<nop\>               | 
-| \<Left\>      | i, n, v | \<nop\>               | 
-| \<Right\>     | i, n, v | \<nop\>               | 
-| \<leader\>p   | n       | Preview hunk          | 
-| \<leader\>a   | n       | Add to harpoon list   | 
-| \<C-e\>       | n       | Open harpoon list     | 
-| \<leader\>j   | n       | Next item from list   | 
-| \<leader\>k   | n       | Prev item from list   | 
-| \<leader\>1   | n       | Open 1st list item    | 
-| \<leader\>2   | n       | Open 3nd list item    | 
-| \<leader\>3   | n       | Open 3rd list item    | 
-| \<leader\>4   | n       | Open 4th list item    | 
-| \<leader\>5   | n       | Open 5th list item    | 
-| \<leader\>6   | n       | Open 6th list item    | 
-| \<leader\>7   | n       | Open 7th list item    | 
-| \<leader\>8   | n       | Open 8th list item    | 
-| \<leader\>9   | n       | Open 9th list item    | 
-| \<leader\>0   | n       | Open 10th list item   | 
-| gd            | n       | Go to definition      |
-| gD            | n       | Go to declaration     |
-| gi            | n       | Go to implementation  |
-| gr            | n       | Show references       |
-| go            | n       | Go to type definition |
-| ca            | n       | Code action           |
-| K             | n       | Show hover            |
-| \<C-k\>       | n       | Show signature help   |
-| \<leader\>r   | n       | Rename                |
-| \<leader\>fo  | n, x    | Format                |
-| \<C-s\>       | n, x    | Save and format       |
-| \<leader\>d   | n       | Open diagnostic       |
-| \[d           | n       | Go to prev diagnostic |
-| \]d           | n       | Go to next diagnostic |
-| \<A-j\>       | i       | Move line down        | 
-| \<A-k\>       | i       | Move line up          | 
-| \<A-h\>       | i       | Move word left        | 
-| \<A-l\>       | i       | Move word right       | 
-| \<A-j\>       | x       | Move block down       | 
-| \<A-k\>       | x       | Move block up         | 
-| \<A-h\>       | x       | Move block left       | 
-| \<A-l\>       | x       | Move block right      | 
-| \<leader\>i   | n       | Toggle neotree        | 
-| -             | n       | Open oil buffer       | 
-| \<leader\>o   | n       | Toggle oil float      | 
-| \<leader\>fs  | n       | Live grep             |
-| \<leader\>fg  | n       | Find git files        |
-| \<leader\>fb  | n       | Find buffers          |
-| \<leader\>fh  | n       | Find help tags        | 
-| \<leader\>fk  | n       | Find keymaps          | 
-| \<leader\>fe  | n       | Find files            |
-| \<leader\>ef  | n       | Find files            |
-| \<leader\>t   | n       | Search TODOs          |
-| \<leader\>u   | n       | Toggle undo tree      |
+| Key                     | Modes   | Action                | Filetype |
+| ----------------------- | ------- | --------------------- | -------- |
+| Q                       | n       | \<nop\>               | all      |
+| q:                      | n       | \<nop\>               | all      | 
+| \<leader\>nf            | n       | New File              | all      | 
+| \<leader\>h             | n       | :bprev\<CR\>          | all      | 
+| \<leader\>l             | n       | :bnext\<CR\>          | all      | 
+| \<Space\>               | n, v    | \<nop\>               | all      | 
+| \<Down\>                | i, n, v | \<nop\>               | all      | 
+| \<Up\>                  | i, n, v | \<nop\>               | all      | 
+| \<Left\>                | i, n, v | \<nop\>               | all      | 
+| \<Right\>               | i, n, v | \<nop\>               | all      | 
+| \<leader\>p             | n       | Preview hunk          | all      | 
+| \<leader\>a             | n       | Add to harpoon list   | all      | 
+| \<C-e\>                 | n       | Open harpoon list     | all      | 
+| \<leader\>j             | n       | Next item from list   | all      | 
+| \<leader\>k             | n       | Prev item from list   | all      | 
+| \<leader\>1             | n       | Open 1st list item    | all      | 
+| \<leader\>2             | n       | Open 3nd list item    | all      | 
+| \<leader\>3             | n       | Open 3rd list item    | all      | 
+| \<leader\>4             | n       | Open 4th list item    | all      | 
+| \<leader\>5             | n       | Open 5th list item    | all      | 
+| \<leader\>6             | n       | Open 6th list item    | all      | 
+| \<leader\>7             | n       | Open 7th list item    | all      | 
+| \<leader\>8             | n       | Open 8th list item    | all      | 
+| \<leader\>9             | n       | Open 9th list item    | all      | 
+| \<leader\>0             | n       | Open 10th list item   | all      | 
+| gd                      | n       | Go to definition      | all      |
+| gD                      | n       | Go to declaration     | all      |
+| gi                      | n       | Go to implementation  | all      |
+| gr                      | n       | Show references       | all      |
+| go                      | n       | Go to type definition | all      |
+| ca                      | n       | Code action           | all      |
+| K                       | n       | Show hover            | all      |
+| \<C-k\>                 | n       | Show signature help   | all      |
+| \<leader\>r             | n       | Rename                | all      |
+| \<leader\>fo            | n, x    | Format                | all      |
+| \<C-s\>                 | n, x    | Save and format       | all      |
+| \<leader\>d             | n       | Open diagnostic       | all      |
+| \[d                     | n       | Go to prev diagnostic | all      |
+| \]d                     | n       | Go to next diagnostic | all      |
+| \<A-j\>                 | i       | Move line down        | all      | 
+| \<A-k\>                 | i       | Move line up          | all      | 
+| \<A-h\>                 | i       | Move word left        | all      | 
+| \<A-l\>                 | i       | Move word right       | all      | 
+| \<A-j\>                 | x       | Move block down       | all      | 
+| \<A-k\>                 | x       | Move block up         | all      | 
+| \<A-h\>                 | x       | Move block left       | all      | 
+| \<A-l\>                 | x       | Move block right      | all      | 
+| \<leader\>i             | n       | Toggle neotree        | all      | 
+| -                       | n       | Open oil buffer       | all      | 
+| \<leader\>o             | n       | Toggle oil float      | all      | 
+| \<leader\>fs            | n       | Live grep             | all      |
+| \<leader\>fg            | n       | Find git files        | all      |
+| \<leader\>fb            | n       | Find buffers          | all      |
+| \<leader\>fh            | n       | Find help tags        | all      | 
+| \<leader\>fk            | n       | Find keymaps          | all      | 
+| \<leader\>fe            | n       | Find files            | all      |
+| \<leader\>ef            | n       | Find files            | all      |
+| \<leader\>t             | n       | Search TODOs          | all      |
+| \<leader\>x             | n       | Run line in nvim      | lua      |
+| \<leader\>x             | x       | Run selected in nvim  | lua      |
+| \<leader\>\<leader\>x   | n       | Run file in nvim      | lua      |
 
 There are also some default kebinds or functions provided by plugins, for those go to the plugin github repository.
   
