@@ -20,6 +20,7 @@ My personal Nvim config
 - [ripgrep](https://github.com/BurntSushi/ripgrep#Installation) 
 - [node](https://github.com/nodejs/node)
 - [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
+- [deno](https://https://github.com/denoland/deno)
 
 ## 2. Backup old nvim config:  
 ```sh
@@ -49,6 +50,7 @@ nvim
 - [fedepujol/move.nvim](https://github.com/fedepujol/move.nvim)  
 - [nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)  
 - [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)  
+- [toppair/peek.nvim](https://github.com/toppair/peek.nvim)  
 - [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)  
 - [catppuccin/nvim](https://github.com/catppuccin/nvim)  
 - [folke/todo-comments.nvim](https://github.com/folke/todo-comments.nvim)  
@@ -124,6 +126,7 @@ vim.g.maplocalleader = ","
 | \<leader\>x             | n       | Run line in nvim      | lua      |
 | \<leader\>x             | x       | Run selected in nvim  | lua      |
 | \<leader\>\<leader\>x   | n       | Run file in nvim      | lua      |
+| \<leader\>m             | n       | Toggle preview        | markdown |
 
 There are also some default kebinds or functions provided by plugins, for those go to the plugin github repository.
   
