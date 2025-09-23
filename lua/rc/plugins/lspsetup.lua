@@ -45,9 +45,8 @@ return {
             },
           },
         },
-        -- TODO: choose version
-        ["zls@TODO"] = {
-          cmd = { "/path/to/zls" },
+        ["zls@ZLS_PATH"] = {
+          cmd = { os.getenv("ZLS_PATH") },
           settings = {
             zls = {
               enable_inlay_hints = true,
@@ -55,6 +54,7 @@ return {
               inlay_hints_exclude_single_argument = true,
               inlay_hints_hide_redundant_param_names = false,
               inlay_hints_hide_redundant_param_names_last_token = false,
+              enable_build_on_save = true,
             }
           }
         },

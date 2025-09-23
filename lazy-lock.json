@@ -1,6 +1,7 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
   "alpha-nvim": { "branch": "main", "commit": "2b3cbcdd980cae1e022409289245053f62fb50f6" },
+  "blink.cmp": { "branch": "main", "commit": "327fff91fe6af358e990be7be1ec8b78037d2138" },
   "catppuccin": { "branch": "main", "commit": "f19cab18ec4dc86d415512c7a572863b2adbcc18" },
   "cloak.nvim": { "branch": "main", "commit": "648aca6d33ec011dc3166e7af3b38820d01a71e4" },
   "gitsigns.nvim": { "branch": "main", "commit": "f780609807eca1f783a36a8a31c30a48fbe150c5" },
@@ -14,7 +15,7 @@
   "move.nvim": { "branch": "main", "commit": "599b14047b82e92874b9a408e4df228b965c3a1d" },
   "neo-tree.nvim": { "branch": "v3.x", "commit": "ed057048a281b418d5318dd5153f9486daa517a3" },
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
-  "nvim-lspconfig": { "branch": "master", "commit": "e074ff04d7ff72cd441f00ed7c1ed59052e29081" },
+  "nvim-lspconfig": { "branch": "master", "commit": "b3cce1419ca67871ae782b3e529652f8a016f0de" },
   "nvim-treesitter": { "branch": "main", "commit": "5a70b1eb8cbdf6c7f0a59dfb7356ad198421b620" },
   "oil.nvim": { "branch": "master", "commit": "07f80ad645895af849a597d1cac897059d89b686" },
   "peek.nvim": { "branch": "master", "commit": "5820d937d5414baea5f586dc2a3d912a74636e5b" },

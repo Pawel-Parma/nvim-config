@@ -4,7 +4,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     local has_formatter = false
 
     for _, client in pairs(clients) do
-      if client.supports_method("textDocument/formatting") then
+      if client.server_capabilities.documentFormattingProvider then
         has_formatter = true
         break
       end
