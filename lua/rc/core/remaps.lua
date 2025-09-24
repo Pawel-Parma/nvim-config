@@ -20,9 +20,6 @@ end, {})
 
 vim.keymap.set("n", "<leader>w", function() vim.cmd ":write" end, {})
 
-vim.keymap.set("n", "<leader>h", ":bprev<CR>", {})
-vim.keymap.set("n", "<leader>l", ":bnext<CR>", {})
-
 vim.keymap.set({ "n", "v" }, "<Space>", "<nop>")
 vim.keymap.set({ "i", "n", "v" }, "<Down>", "<nop>", {})
 vim.keymap.set({ "i", "n", "v" }, "<Up>", "<nop>", {})

@@ -69,8 +69,6 @@ vim.g.maplocalleader = ","
 | q:                      | n       | \<nop\>               | all      | 
 | \<leader\>nf            | n       | New File              | all      | 
 | \<leader\>w             | n       | Write buffer          | all      |
-| \<leader\>h             | n       | :bprev\<CR\>          | all      | 
-| \<leader\>l             | n       | :bnext\<CR\>          | all      | 
 | \<Space\>               | n, v    | \<nop\>               | all      | 
 | \<Down\>                | i, n, v | \<nop\>               | all      | 
 | \<Up\>                  | i, n, v | \<nop\>               | all      | 
@@ -79,8 +77,6 @@ vim.g.maplocalleader = ","
 | \<leader\>p             | n       | Preview hunk          | all      | 
 | \<leader\>a             | n       | Add to harpoon list   | all      | 
 | \<C-e\>                 | n       | Open harpoon list     | all      | 
-| \<leader\>j             | n       | Next item from list   | all      | 
-| \<leader\>k             | n       | Prev item from list   | all      | 
 | \<leader\>1             | n       | Open 1st list item    | all      | 
 | \<leader\>2             | n       | Open 3nd list item    | all      | 
 | \<leader\>3             | n       | Open 3rd list item    | all      | 
