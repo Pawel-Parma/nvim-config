@@ -68,6 +68,7 @@ vim.g.maplocalleader = ","
 | Q                       | n       | \<nop\>               | all      |
 | q:                      | n       | \<nop\>               | all      | 
 | \<leader\>nf            | n       | New File              | all      | 
+| \<leader\>w             | n       | Write buffer          | all      |
 | \<leader\>h             | n       | :bprev\<CR\>          | all      | 
 | \<leader\>l             | n       | :bnext\<CR\>          | all      | 
 | \<Space\>               | n, v    | \<nop\>               | all      | 
@@ -100,7 +101,6 @@ vim.g.maplocalleader = ","
 | \<C-k\>                 | n       | Show signature help   | all      |
 | \<leader\>r             | n       | Rename                | all      |
 | \<leader\>fo            | n, x    | Format                | all      |
-| \<C-s\>                 | n, x    | Save and format       | all      |
 | \<leader\>d             | n       | Open diagnostic       | all      |
 | \[d                     | n       | Go to prev diagnostic | all      |
 | \]d                     | n       | Go to next diagnostic | all      |

@@ -86,9 +86,6 @@ return {
         vim.keymap.set({ "n", "x" }, "<leader>fo", function()
           vim.lsp.buf.format({ async = true })
         end, opts)
-        vim.keymap.set({ "n", "x" }, "<C-s>", function()
-          vim.cmd ":write"
-        end, opts)
         vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
         vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
         vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
