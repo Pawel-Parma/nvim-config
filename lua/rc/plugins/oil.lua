@@ -6,7 +6,6 @@ return {
     local oil = require("oil")
     oil.setup({
       delete_to_trash = true,
-      default_file_explorer = false,
       view_options = {
         show_hidden = true,
       },

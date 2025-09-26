@@ -7,7 +7,7 @@ return {
     neotree.setup({
       filesystem = {
         follow_current_file = { enabled = true },
-        hijack_netrw_behavior = "open_current",
+        hijack_netrw_behavior = "disabled",
         group_empty_dirs = true,
       }
     })

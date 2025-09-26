@@ -7,12 +7,5 @@ return {
     peek.setup({
       app = 'browser',
     })
-    PeekToggle = function()
-      if peek.is_open() then
-        peek.close()
-      else
-        peek.open()
-      end
-    end
   end,
 }

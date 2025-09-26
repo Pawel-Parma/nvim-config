@@ -5,10 +5,11 @@ return { -- TODO: configure
   opts = {
     keymap = { preset = 'super-tab' },
     completion = {
-      documentation = { auto_show = false },
-    },
-    sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      accept = {
+        auto_brackets = {
+          enabled = true
+        },
+      },
     },
   },
   opts_extend = { "sources.default" }
