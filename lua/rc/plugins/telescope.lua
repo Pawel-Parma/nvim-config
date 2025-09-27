@@ -11,6 +11,11 @@ return {
         file_ignore_patterns = { "^.git/" },
         hidden = true,
       },
+      pickers = {
+        find_files = {
+          hidden = true,
+        },
+      },
       devicons = {
         get = icons.mock_nvim_web_devicons()
       }
