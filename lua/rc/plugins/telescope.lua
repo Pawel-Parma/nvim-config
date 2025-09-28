@@ -8,12 +8,12 @@ return {
     local icons = require("mini.icons")
     telescope.setup({
       defaults = {
-        file_ignore_patterns = { "^.git/" },
+        file_ignore_patterns = { "^.git" },
         hidden = true,
       },
       pickers = {
         find_files = {
-          hidden = true,
+          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git" },
         },
       },
       devicons = {

@@ -10,6 +10,9 @@ vim.keymap.set("n", "<leader>w", ":write<CR>")
 vim.keymap.set("n", "<leader>q", ":quit<CR>")
 vim.keymap.set("n", "<leader>b", ":buffer #<CR>")
 
+vim.keymap.set("n", "gy", '"+y')
+vim.keymap.set("n", "gp", '"+p')
+
 vim.keymap.set("n", "<leader>so", ":on<CR>")
 vim.keymap.set("n", "<leader>sw", ":close<CR>")
 vim.keymap.set("n", "<leader>sh", ":leftabove vsplit<CR>")
