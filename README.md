@@ -17,6 +17,7 @@ My personal Nvim config
 # Installation
 ## 1. Install requirements:
 - [ripgrep](https://github.com/BurntSushi/ripgrep#Installation) 
+- [fd](https://github.com/sharkdp/fd) 
 - [node](https://github.com/nodejs/node)
 - [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
 - [deno](https://github.com/denoland/deno)

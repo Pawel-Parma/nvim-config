@@ -1,6 +1,5 @@
 return {
   "goolord/alpha-nvim",
-  event = "VimEnter",
   config = function()
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
@@ -28,5 +27,17 @@ return {
     alpha.setup(dashboard.opts)
 
     vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
+
+    vim.api.nvim_create_autocmd("VimEnter", {
+      callback = function()
+        local args = vim.fn.argv()
+        if #args == 0 or vim.fn.isdirectory(args[1]) == 1 then
+          if #vim.api.nvim_list_bufs() > 0 then
+            vim.cmd("bufdo bdelete")
+          end
+          alpha.start()
+        end
+      end,
+    })
   end,
 }
