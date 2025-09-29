@@ -19,7 +19,7 @@ My personal Nvim config
 - [ripgrep](https://github.com/BurntSushi/ripgrep#Installation) 
 - [node](https://github.com/nodejs/node)
 - [tree-sitter-cli](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
-- [deno](https://https://github.com/denoland/deno)
+- [deno](https://github.com/denoland/deno)
 
 ## 2. Backup old nvim config:  
 ```sh
@@ -36,6 +36,13 @@ The packages and linters will be automatically downloaded the next time you open
 ```sh
 nvim
 ```
+
+## 5. Health check
+To ensure that the installation procceded as expected, inside neovim run
+```vim
+:chechhealth
+```
+
 
 # List of Changes 
 ## Plugins 
