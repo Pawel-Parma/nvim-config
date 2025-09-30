@@ -57,7 +57,7 @@ To ensure that the installation procceded as expected, inside neovim run
 - [theprimeagen/harpoon](https://github.com/theprimeagen/harpoon)  
 - [junnplus/lsp-setup.nvim](https://github.com/junnplus/lsp-setup.nvim)
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)  
-- [echasnovski/mini.icons](https://github.com/echasnovski/mini.icons)
+- [nvim-mini/mini.icons](https://github.com/nvim-mini/mini.icons)
 - [fedepujol/move.nvim](https://github.com/fedepujol/move.nvim)  
 - [nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)  
 - [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim)  

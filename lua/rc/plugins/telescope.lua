@@ -1,14 +1,17 @@
 return {
   "nvim-telescope/telescope.nvim",
   branch = "master",
-  dependencies = { "nvim-lua/plenary.nvim", "echasnovski/mini.icons" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-mini/mini.icons",
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
+  },
   config = function()
     local telescope = require("telescope")
     local builtin = require("telescope.builtin")
     local icons = require("mini.icons")
     telescope.setup({
       defaults = {
-        file_ignore_patterns = { "^.git" },
         hidden = true,
       },
       pickers = {
@@ -16,10 +19,16 @@ return {
           find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git" },
         },
       },
+      extensions = {
+        fzf = {},
+      },
       devicons = {
         get = icons.mock_nvim_web_devicons()
       }
     })
+
+    telescope.load_extension('fzf')
+
     vim.keymap.set("n", "<leader>fs", builtin.live_grep, {})
     vim.keymap.set("n", "<leader>fg", builtin.git_files, {})
     vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
